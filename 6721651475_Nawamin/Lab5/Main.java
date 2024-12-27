@@ -14,7 +14,7 @@ public class Main {
         System.out.println(A.Distance(B));
         System.out.println(A.Distance(0, 0));
         System.out.println(B.Distance(10, 100));
-        System.out.println(Point.getCount() + ".0");
+        System.out.println(Point.getCount() + 0.0);
         
         // ข้อที่ 2
         MoveablePoint C = new MoveablePoint(25, 60, 5);
