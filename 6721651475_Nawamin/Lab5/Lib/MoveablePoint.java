@@ -31,6 +31,7 @@ public class MoveablePoint extends Point {
         this.speed = speed;
     }
 
+    //@Override
     public String toString() {
         return "(" + x + "," + y + "," + speed + ")";
     }
