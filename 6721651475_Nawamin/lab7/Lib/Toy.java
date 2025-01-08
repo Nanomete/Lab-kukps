@@ -11,7 +11,7 @@ public abstract class Toy {
     public int getMinAge(){
         return this.minAge; 
     }
-    public String getCatrgory(){
+    public String getCategory(){
         return this.category;
     }
     public void setMinAge(int minAge){
