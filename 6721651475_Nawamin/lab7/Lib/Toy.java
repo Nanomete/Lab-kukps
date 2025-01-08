@@ -9,7 +9,7 @@ public abstract class Toy {
     }
 
     public int getMinAge(){
-        return this.minAge;
+        return this.minAge; 
     }
     public String getCatrgory(){
         return this.category;
