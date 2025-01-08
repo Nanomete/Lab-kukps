@@ -20,5 +20,5 @@ public abstract class Toy {
     public void setCategory(String category){
         this.category=category;
     }
-    public abstract  void play();
+    public abstract void play();
 }

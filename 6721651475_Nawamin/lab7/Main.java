@@ -7,7 +7,7 @@ public class Main {
         c.play();
         System.out.println("Area: " + c.calculateArea());
         System.out.println("Circumference: " + c.calculateCircumference());
-        System.out.println("Height: " + c.getHight());
+        System.out.println("Height: " + c.getHeight());
         System.out.println("Width: " + c.getWidth());
     }
 }

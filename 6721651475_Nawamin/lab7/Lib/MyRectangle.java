@@ -1,9 +1,9 @@
 package Lib;
 
 public interface  MyRectangle extends MyShape{
-    public double getHight();
+    public double getHeight();
     public double getWidth();
-    public void setHight(double hight);
+    public void setHeight(double height);
     public void setWidth(double width);
 
 }

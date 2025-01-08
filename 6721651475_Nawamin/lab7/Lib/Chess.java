@@ -1,32 +1,32 @@
 package Lib;
 
 public class Chess extends Toy implements MyRectangle {
-    private double hight;
+    private double height;
     private double width;
     public Chess(){
         super("bord game",7); // send value to super class
-        setHight(100);// send value to setHight
+        setHeight(100);// send value to setHight
         setWidth(80); // send value to setWidth
     }
     
     public double calculateArea() { // from MyShape
-        return hight * width;
+        return height * width;
     }
     
     public double calculateCircumference() { // from MyShape
-       return  2 * (hight + width);
+       return  2 * (height + width);
     }
     
-    public double getHight() { // from MyRectangle
-        return this.hight;
+    public double getHeight() { // from MyRectangle
+        return this.height;
     }
    
     public double getWidth() {  // from MyRectangle
         return this.width;
     }
     
-    public void setHight(double hight) { // from MyRectangle
-        this.hight = hight;
+    public void setHeight(double height) { // from MyRectangle
+        this.height = height;
     }
     
     public void setWidth(double width) { // from MyRectangle
