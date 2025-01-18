@@ -3,7 +3,7 @@ import Lib.Data;
 import java.util.Scanner;
 
 public class Main {
-    // ข้อ 2
+    // No 2
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Data daTa = new Data();

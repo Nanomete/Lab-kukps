@@ -15,12 +15,12 @@ public class MoveablePoint extends Point {
     }
 
     public void Forward() {
-        x += speed;
-        y += speed;
+        x += speed; // x = x + speed เพื่อเคลื่อนที่ไปข้างหน้า
+        y += speed; // y = y + speed เพื่อเคลื่อนที่ไปข้างหน้า 
     }
     public void Backward() {
-        x -= speed;
-        y -= speed;
+        x -= speed; // x = x - speed เพื่อเคลื่อนที่ไปข้างหลัง
+        y -= speed; // y = y - speed เพื่อเคลื่อนที่ไปข้างหลัง
     }
 
     public double getSpeed() {

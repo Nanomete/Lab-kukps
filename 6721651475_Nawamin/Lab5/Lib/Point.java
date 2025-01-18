@@ -33,17 +33,17 @@ public class Point {
         this.y = y;
     }
     public static void setCount(int count) {
-        Point.count = count;
+        Point.count = count; // กำหนดค่า count โดยการสร้าง object ใหม่ เพราะ count เป็น static
     }
 
     public double Distance() {
-        return Math.sqrt(Math.pow(x , 2) + Math.pow(y, 2));
+        return Math.sqrt(Math.pow(x , 2) + Math.pow(y, 2)); // คำนวณระยะทางจากจุด (0,0)
     }
     public double Distance(double x2, double y2) {
-        return Math.sqrt(Math.pow((x2 - x), 2) + Math.pow((y2 - y), 2));
+        return Math.sqrt(Math.pow((x2 - x), 2) + Math.pow((y2 - y), 2)); // คำนวณระยะทางจากจุด (x,y)
     }
     public double Distance(Point p) {
-        return Distance(p.getX(), p.getY());
+        return Distance(p.getX(), p.getY()); // คำนวณระยะทางจากจุด p
     } 
     public static void increseCount() {
         count++;

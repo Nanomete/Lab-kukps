@@ -8,7 +8,7 @@ public class Data {
     Scanner input;
 
     public Data() {
-        data = new ArrayList<>();
+        data = new ArrayList<>(); // ArrayList is a class that implements List interface
         input = new Scanner(System.in);
     }
     public void printMenu() {
@@ -23,7 +23,7 @@ public class Data {
     public void printArr() {
         System.out.print("Data = ");
         for (String text : data) {
-            System.out.print(text + " ");
+            System.out.print(text + " "); // text is a string in data
         }
         System.out.println();
         System.out.println();

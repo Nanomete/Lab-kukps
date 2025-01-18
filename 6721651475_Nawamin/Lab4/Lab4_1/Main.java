@@ -24,7 +24,8 @@ public class Main {
         A.setName("David", "Beckham");
         A.setBirthdate(2, 5, 1975);
         System.out.println(A.toString());
-
+ 
+        // no.1
         MyDate x = new MyDate();
         x.setDate(16, 8, 2005);
         System.out.println(x.toString());

@@ -4,6 +4,7 @@ public class Chess extends Toy implements MyRectangle {
     private double height;
     private double width;
     public Chess(){
+        // super คือการเรียกใช้ constructor ของ class แม่
         super("bord game",7); // send value to super class
         setHeight(100);// send value to setHight
         setWidth(80); // send value to setWidth
@@ -36,8 +37,6 @@ public class Chess extends Toy implements MyRectangle {
     public void play() { // from Toy
         System.out.println("Game Start!!!");
     }
-    
-    
  }
     
 
