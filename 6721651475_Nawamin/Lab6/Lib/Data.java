@@ -1,12 +1,9 @@
 package Lib;
-
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Data {
     private ArrayList<String> data;
     Scanner input;
-
     public Data() {
         data = new ArrayList<>(); // ArrayList is a class that implements List interface
         input = new Scanner(System.in);
@@ -28,7 +25,6 @@ public class Data {
         System.out.println();
         System.out.println();
     }
-
     // 1) Add Text to back
     public void addTextToBack() throws Exception {
         System.out.println("== Add Text to back ==");
@@ -37,7 +33,6 @@ public class Data {
         data.add(text);
         printArr();
     }
-
     // 2) Add Text at index
     public void addTextAtIndex() throws Exception {
         System.out.println("== Add Text at index ==");
@@ -49,7 +44,6 @@ public class Data {
         data.add(index, text);
         printArr();
     }
-
     // 3) Edit Text
     public void editText() throws Exception {
         System.out.println("== Edit Text ==");
@@ -61,7 +55,6 @@ public class Data {
         data.set(index, text);
         printArr();
     }
-
     // 4) Remove Text by index
     public void removeTextByIndex() throws Exception {
         System.out.println("== Remove Text by index ==");
@@ -70,7 +63,6 @@ public class Data {
         data.remove(index);
         printArr();
     }
-
     // 5) Remove Text by value
     public void removeTextByValue() throws Exception {
         input.nextLine();

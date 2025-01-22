@@ -1,4 +1,3 @@
-
 import Lib.Data;
 import java.util.Scanner;
 
