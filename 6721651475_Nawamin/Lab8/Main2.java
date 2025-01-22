@@ -13,7 +13,9 @@ public class Main2 {
             File f = new File("Text1.txt");
             FileWriter fw = null;
             BufferedWriter bw = null;
-            if (!(mName.equals("Q"))) {
+            if (mName.equals("Q")) {
+                break;
+            } else {
                 try {
                     fw = new FileWriter(f, true);
                     bw = new BufferedWriter(fw);
@@ -30,6 +32,6 @@ public class Main2 {
                 }
             }
             i++;
-        } while (!(mName.equals("Q")));
+        } while (true);
     }
 }
