@@ -3,35 +3,33 @@ import java.util.Scanner;
 
 public class Main2 {
     public static void main(String[] args) {
-        Scanner Input = new Scanner(System.in);
-        String mName;
+        File f = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
         int i = 1;
-
-        do {             
-            System.out.print("Please input name : ");
-            mName = Input.nextLine();
-            File f = new File("Text1.txt");
-            FileWriter fw = null;
-            BufferedWriter bw = null;
-            if (mName.equals("Q")) {
-                break;
-            } else {
-                try {
-                    fw = new FileWriter(f, true);
-                    bw = new BufferedWriter(fw);
-                    bw.write("Name" + "[" + i + "]" + " : " + mName + "\n");
-                } catch (Exception e) {
-                    System.out.println(e);
-                } finally {
-                    try {
-                        bw.close();
-                        fw.close();
-                    } catch (Exception e) {
-                        System.out.println(e);
-                    }
+        try {
+            f = new File("Text1.txt");
+            fw = new FileWriter(f);
+            bw = new BufferedWriter(fw);
+            Scanner Input = new Scanner(System.in);
+            do {
+                System.out.print("Please input name : ");
+                String Name = Input.nextLine();
+                if (Name.equals("Q")) {
+                    break;
                 }
+                bw.write("Name ["+ i + "]" +Name + "\n");
+                i++;
+            } while(true);
+            Input.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            try {
+                bw.close(); fw.close();
+            } catch (Exception x) {
+                System.out.println(x);
             }
-            i++;
-        } while (true);
+        }
     }
 }
