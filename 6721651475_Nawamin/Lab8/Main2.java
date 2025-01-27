@@ -18,7 +18,7 @@ public class Main2 {
                 if (Name.equals("Q")) {
                     break;
                 }
-                bw.write("Name ["+ i + "]" +Name + "\n");
+                bw.write("Name ["+ i + "]" + " : " + Name + "\n");
                 i++;
             } while(true);
             Input.close();
