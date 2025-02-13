@@ -1,12 +1,12 @@
 package Lib;
 import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 public class Form2 extends JFrame implements ActionListener {
 
     Container cp ;
-    JButton left,right,up,down,box,reset ;
+    JButton left,right,up,down,box,reset;
     
     public Form2(){
         Initial();
@@ -28,24 +28,27 @@ public class Form2 extends JFrame implements ActionListener {
         reset = new JButton("RESET");
         box = new JButton();
         box.setBackground(Color.black);
-        box.setBounds(0, 0, 50, 50);
+        box.setBounds(0, 30, 50, 50);
 
         left.setBounds(25, 230, 47, 30);
         down.setBounds(70, 230, 47, 30);
         right.setBounds(115, 230, 47, 30);
         up.setBounds(70, 200, 47, 30);
+        reset.setBounds(0, 0, 200, 30);
 
         x = box.getX();
         y = box.getY();
 
         cp.add(left);cp.add(right);
         cp.add(up);cp.add(down);
+        cp.add(reset);
         cp.add(box);
 
         right.addActionListener(this);
         left.addActionListener(this);
         up.addActionListener(this);
         down.addActionListener(this);
+        reset.addActionListener(this);
     }
 
     public void Finally(){
@@ -62,15 +65,17 @@ public class Form2 extends JFrame implements ActionListener {
         if (e.getSource() == right && x + box.getWidth() <= cp.getWidth()) {
             x += 5;
             box.setBounds(x, y, 50, 50);
-        } else if (e.getSource() == left && x - 5 >= 0) {
+        } else if (e.getSource() == left && x - 5 >= 30) {
             x -= 5;
             box.setBounds(x, y, 50, 50);
         } else if (e.getSource() == up && y - 5 >= 0) {
             y -= 5;
             box.setBounds(x, y, 50, 50);
-        } else if (e.getSource() == down && y + box.getHeight() < cp.getHeight() - (up.getHeight() + down.getHeight())) {
+        } else if (e.getSource() == down && y + box.getHeight() < cp.getHeight() - ((up.getHeight() + down.getHeight()))-5) {
             y += 5;
             box.setBounds(x, y, 50, 50);
+        } else if (e.getSource() == reset) {
+            box.setBounds(0, 30, 50, 50);
         }
     }
 }
