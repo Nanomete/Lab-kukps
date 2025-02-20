@@ -5,7 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import javax.swing.*;
 
 public class FormLab12_1 extends JFrame implements ActionListener, KeyListener{
@@ -60,6 +62,7 @@ public class FormLab12_1 extends JFrame implements ActionListener, KeyListener{
             t1.setText("");
             t2.setText("");
         } else if (e.getSource() == b1) {
+            Write_csv(t1.getText(), t2.getText());
         }
     }
     @Override
@@ -81,5 +84,24 @@ public class FormLab12_1 extends JFrame implements ActionListener, KeyListener{
     @Override
     public void keyReleased(KeyEvent e) {
 
+    }
+      public void Write_csv(String id, String name) {
+        File f = null;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        try {
+            f = new File("./STD.csv");
+            fw = new FileWriter(f, true);
+            bw = new BufferedWriter(fw);
+            bw.write(id + "," + name + "\n");
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            try {
+                bw.close(); fw.close();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
     }
 }
