@@ -1,4 +1,3 @@
-Name [1]Nawamin
-Name [2]Siwat
-Name [3]Padol
-Name [4]Jettarin
+Name [1] : Ken
+Name [2] : Shogun
+Name [3] : Sasin

@@ -12,7 +12,7 @@ public class Form1 extends JFrame {
         Finally();
     }
 
-    public void Initial() {
+    public void Initial() {  // set layout
         cp = this.getContentPane();
         cp.setLayout(new BorderLayout());
     }

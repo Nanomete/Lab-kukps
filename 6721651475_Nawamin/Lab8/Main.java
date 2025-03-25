@@ -10,7 +10,7 @@ public class Main {
         String Text = input.nextLine();
         input.close();
         File f = null;
-        FileReader fr = null;
+        FileReader fr = null; // only read
         BufferedReader br = null;
         try {
             f = new File(fileName+".csv");

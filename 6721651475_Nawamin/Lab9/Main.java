@@ -7,6 +7,7 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         Form();
+        // LoginPage();
     }
 
     public static void LoginPage() {
@@ -74,13 +75,12 @@ public class Main {
             fr = new FileReader(file);
             br = new BufferedReader(fr);
             String s;
-            br.readLine();
+            br.readLine(); // header line
             while ((s = br.readLine()) != null) {
                 String arr[] = s.split(","); // for split strat to "," => 1, Bangkok [1 is 0 index, Bangkok is 1 index]
                 select_Province.addItem(arr[1]); // lacotion 1 is behind ","
             }
-            select_Province.setSelectedIndex(1);
-            
+            select_Province.setSelectedIndex(1);            
         } catch (Exception e) {
             System.out.println(e);
         } finally {
